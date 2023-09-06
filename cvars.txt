@@ -1,2 +1,2 @@
-kNavRotKp = 20
-kNavRotKd = 1.5
+kNavRotKp = 5
+kNavRotKd = 0.6
