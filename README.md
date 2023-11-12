@@ -35,18 +35,18 @@ personally enjoy the snappier control, but you might not! So, beware.
 My understanding of a PID controller is as follows. I'm no controls engineer,
 so don't take this as 100% correct information!
 
-A "controller" is a device or piece of software or something similar that
+A *controller* is a device or piece of software or something similar that
 directs things how to move or change. Controllers can correct errors and stuff
 and are everywhere. Robot arms need a type of controller to keep them accurate
 and consistent, thermostats need to hit a target temperature, et cetera.
 
-A "feedback controller" takes information about the actual system its
+A *feedback controller* takes information about the actual system its
 controlling and calculates how far it is off from the goal. It then attempts to
 correct itself using this error value. Robot arms will resist when you try to
 move them, and thermostats will try to make the building warmer if the
 temperature becomes too cold. This is because they use feedback controllers.
 
-A PID controller is a type of simple but robust feedback controller. It doesn't
+A *PID controller* is a type of simple but robust feedback controller. It doesn't
 require a bunch of fancy calculations, yet is still used widely for a wide
 variety of tasks.
 
@@ -56,12 +56,12 @@ comprises three functions. The value passed into these functions is the
 difference between the target orientation as declared by the ship's AI and the
 ship's current orientation. This value is called the error of the system.
 
-- The Proportional controller (the "P" in PID) takes in the current error of
+- **The Proportional controller** (the "P" in PID) takes in the current error of
   the system and outputs thrust proportional to this value. That is, when your
   ship is very far away from its target orientation, the thrusters will push
   harder than if your ship is very close to your target orientation. This is a
   simple way to correct for error, and it works. 
-- The Integral controller (the "I" in PID) takes in the current error of the
+- **The Integral controller** (the "I" in PID) takes in the current error of the
   system and ADDS it to the sum of all previous error values passed into it.
   That is, it takes the "area under the curve" of the error; it integrates the
   error. This controller comes into play when the error of your system remains
@@ -69,7 +69,7 @@ ship's current orientation. This value is called the error of the system.
   to rotate. If this occurs, the Integral controller will slowly ramp up your
   ship's thrust until its sum gets back to zero. This causes your system to
   have zero or very little steady state error. 
-- The Derivative controller (the "D" in PID) takes the current error of the
+- **The Derivative controller** (the "D" in PID) takes the current error of the
   system and finds the difference between it and the previous error value
   passed into it; it takes the difference between the current and previous
   error, the derivative of the error. Unlike the other two controllers, the
@@ -110,4 +110,4 @@ ship design. This mod changes cvars that SF does not interact with. That is,
 this mod's position in Reassembly's mod list relative to Standardized Factions
 does not matter.
 
-Ship in preview image is "
+Ship in preview image is **Desonder MkIII**, by Luke AP.
