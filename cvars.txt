@@ -1,2 +1,3 @@
 kNavRotKp = 5
 kNavRotKd = 0.6
+kNavCanRotateThreshold = 0.001
