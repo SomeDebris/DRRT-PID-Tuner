@@ -1,16 +1,16 @@
 modfiles = cvars.txt preview.png README.md
 
-name = DRRT PID Tuner
+name = DRRT_PID_Tuner
 
-zip:
-	zip "$(name)".zip $(modfiles)
+$(name).zip :
+	zip $@ $(modfiles)
 
-tarball:
-	tar -czvf "$(name)".tar.gz $(modfiles)
+$(name).tar.gz :
+	tar -czvf $@ $(modfiles)
 
-7zip:
-	7z a "$(name)".7z $(modfiles)
+$(name).7z :
+	7z a $@ $(modfiles)
 
 clean:
-	rm -f "$(name).zip" "$(name).tar.gz" "$(name).7z"
+	rm -f $(name).zip $(name).tar.gz $(name).7z
 	
