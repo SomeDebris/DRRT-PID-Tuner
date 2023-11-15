@@ -10,3 +10,9 @@ tarball:
 
 7zip:
 	7z a "$(name)".7z $(modfiles)
+
+clean:
+	rm "$(name).zip"
+	rm "$(name).tar.gz"
+	rm "$(name).7z"
+	
