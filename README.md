@@ -1,5 +1,10 @@
 # DRRT PID Tuner
 
+**A mod for the video game Reassembly that makes ships rotate more quickly by 
+tuning the game's PID gains.**
+
+This mod also eliminates Slider AI entirely.
+
 ![Preview image](preview.png)
 
 This mod is made for the Debris Regional Reassembly Tournament series.
@@ -12,12 +17,19 @@ EXTREMELY SIMPLE MOD that changes two cvars:
 ```
 kNavRotKp = 5
 kNavRotKd = 0.6
+kNavCanRotateThreshold = 0.001
 ```
 This makes all ships turn much more aggressively; i.e. ships will use the
 maximum possible force from their thrusters for a longer period of time
 whenever they are commanded to rotate. These P and D gains end up significantly
 decreasing the steady state error and settling time for all ships when
 executing a rotation.
+
+This mod eliminates slider AI by setting `kNavCanRotateThreshold` to 0.001. By
+default, this value is 1. Since ships with an angular acceleration rate less
+than `kNavCanRotateThreshold` are declared sliders, and because almost all
+ships will have a greater angular acceleration rate than 0.001 rad/s^2, slider
+AI is made extremely difficult to achieve.
 
 These values are used to control how aggressively ships will want to rotate to
 their target position. Changing these cvars does NOT change the behavior of the
